@@ -1,14 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../../common/api_constants.dart';
-import '../../controllers/bloc.dart';
 import '../../models/search_model.dart';
 
 class SearchList extends StatelessWidget {
   final SearchModel data;
-  final BLoC bLoC;
 
-  const SearchList({Key? key, required this.data, required this.bLoC})
+  const SearchList({Key? key, required this.data})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

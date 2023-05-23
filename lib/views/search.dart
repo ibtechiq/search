@@ -1,14 +1,10 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:search/models/search_model.dart';
-import '../../controllers/bloc.dart';
 import '../controllers/search.dart';
 import '../utilities/components/search_card.dart';
 class SearchScreen extends StatefulWidget {
-  final BLoC bLoC;
 
-  const SearchScreen({Key? key, required this.bLoC}) : super(key: key);
+  const SearchScreen({Key? key}) : super(key: key);
 
   @override
   SearchScreenState createState() => SearchScreenState();
@@ -163,7 +159,6 @@ class SearchScreenState extends State<SearchScreen> {
                                 children: searchDataController.searchModel!.data
                                     .map<Widget>((e) => SearchList(
                                   data: e,
-                                  bLoC: widget.bLoC,
                                 ))
                                     .toList()),
                           ],
